@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        img {
+            width: 20px;
+        }
+
+        table tr td {
+            border: 1px solid black;
+        }
+    </style>
+    <script src="eventler.js"></script>
+    <script src="main.js"></script>
+    <script src="data/country-by-name.js"></script>
+    <script src="data/country-by-flag.json"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+
+</head>
+
+<body onload="opertorleriGoster()">
+
+    <div class="container">
+        <div class="card">
+            <form onsubmit="operatorEkle()">
+                <span>operatör adı</span> <input type="text" placeholder="operatör adı" id="opName" />
+                <br />
+                <span>operatör email</span> <input type="email" placeholder="operatör email" />
+                <br />
+                <input type="radio" value="532" />
+                <input type="radio" value="555" />
+                <input type="radio" value="541" />
+                <br />
+                <br />
+                <select onchange="ulkeSecildi()" id="slcUlkeler">
+                </select>
+                <button class="btn btn-warning" type="submit"> Ekle</button>
+            </form>
+
+            <div id="ulkeDetayi"></div>
+        </div>
+
+        <br />
+        <br />
+        <select id="ulkeler"></select>
+        <input type="button" onclick="sehirleriGetir()" value="ulkleri listele" />
+
+
+        <br />
+        <br />
+        <div class="row">
+            <div class="col-4">
+                <div class="card">
+                    <div class="card-body">
+                        <ul class="list-group" id="ulOperatorler">
+                        </ul>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-4">
+                <div class="card">
+                    <div class="card-body">
+                        <ul class="list-group" id="ulTarifeler">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card">
+                    <div class="card-body">
+                        This is some text within a card body.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <form method="POST">
+                    <select id="slcEtkinlikler" onchange="etkinlikDegisti(this.value)">
+                    </select>
+                    <input style="width:60%" id="myEventName" />
+                </form>
+            </div>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <div class="card">
+            <div class="card-body">
+                <input type="text" id="videoTxt" />
+                <button onclick="videoyuGetir()">getir</button>
+                <div id="videolarList"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

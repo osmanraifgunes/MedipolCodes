@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+
+</head>
+
+<body>
+    <%- include('menu')%>
+    <div class="container card mt-4">
+        <a class="btn btn-success" href="/ekle">ekle</a>
+        <br />
+        <table class="table table-dark">
+            <tr>
+                <th>Adi</th>
+                <th>Soyadi</th>
+                <th>Tablo detay</th>
+                <!--  <th>Adres</th>
+                <th>Detay</th>
+                <th>Logo</th> -->
+            </tr>
+            <% veri.forEach(function(personel){ %>
+            <tr>
+                <td>
+                    <%= personel.Adi %>
+                </td>
+                <td>
+                    <%= personel.Soyadi %>
+                </td>
+                <td>
+                    <%- include('listeacilimi', {calisan:personel,mesaj:'merhaba dünya'})%>
+                </td>
+                <!-- <td>
+                    <%= personel.Adres %>
+                </td>
+                 <td>
+                    <a href="/detay/<%= personel.BolumNo %>">detay</a>
+                </td>
+                <td>
+                    <img src="3d8be49fdb0280ae2ef1fc1b0779def1" />
+                </td> -->
+            </tr>
+            <% }); %>
+
+        </table>
+    </div>
+</body>
+
+</html>

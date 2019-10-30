@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css" />
+</head>
+
+<body>
+    <div class="container card" style="margin-top:30px; padding:30px;">
+        <form method="POST" enctype="multipart/form-data">
+            <div class="field">
+                <label class="label">Adı</label>
+                <div class="control">
+                    <input class="input" type="text" name="Adi" placeholder="Ad girin">
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Soyadı</label>
+                <div class="control">
+                    <input class="input" type="text" name="Soyadi" placeholder="Soyadı girin">
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Maaş</label>
+                <div class="control">
+                    <input class="input" type="text" name="Maas" placeholder="Maaş girin">
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Profil Foto</label>
+                <div class="control">
+                    <input class="input" type="file" name="ProfilResmi">
+                </div>
+            </div>
+
+            <div class="field is-grouped">
+                <div class="control">
+                    <button class="button is-link">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

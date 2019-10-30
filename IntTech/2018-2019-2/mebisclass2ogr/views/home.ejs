@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="container card mt-5">
+            <table class="table table-dark">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                        <th scope="col">Bolum</th>
+                        <th scope="col">Resim</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+
+                            <% data.forEach(function(item){ %>
+                                <tr>
+                                        <th scope="row"> <%=item.Id%></th>
+                                        <td> <%=item.Adi%></td>
+                                        <td> <%=item.Maas%></td>
+                                        <td> <%=item.Cinsiyet%></td>
+                                        <td> <a href="/bolum/<%=item.BolumNo%>">bolüme git</a></td>
+                                        <td> <img width="30" src="24040f6d56edc084114c0542d5a3cc92" alt="" srcset=""> </td>
+                                      </tr>
+                              <% }); %>
+                    
+                     
+                    </tbody>
+                  </table>
+       
+    </div>
+
+</body>
+
+</html>

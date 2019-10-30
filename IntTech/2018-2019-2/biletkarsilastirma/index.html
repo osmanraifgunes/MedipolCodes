@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <style>
+        img {
+            width: 25px;
+        }
+    </style>
+    <style>
+        div {
+            padding: 10px;
+
+        }
+
+        img {
+            margin-right: 5px;
+        }
+
+        table tr {
+            cursor: pointer;
+        }
+
+        table tr:hover {
+            color: #DCDCDC;
+        }
+    </style>
+</head>
+
+<body onload="sayfaHazir()">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <form action="medipol.edu.tr/benzinekle" method="POST" onsubmit="">
+                        <table>
+                            <tr>
+                                <td>Firma adı</td>
+                                <td>
+                                    <input required type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Logo</td>
+                                <td>
+                                    <input type="file">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Istanbul</td>
+                                <td>
+                                        <input type="checkbox" name="gender" value="male"> Male<br>
+                                        <input type="checkbox" name="gender" value="female"> Female<br>
+                                        <input type="checkbox" name="gender" value="other"> Other
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <input class="btn btn-success" type="submit">
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <div class="card text-white bg-primary">
+                    <table id="firmaTable">
+
+                    </table>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card text-white bg-primary">
+                    <input type="text" onkeypress="saatEkle(event)" class="form-control" placeholder="aralık">
+                    <table id="saatTable">
+
+                    </table>
+                </div>
+
+            </div>
+            <div class="col-3">
+                <div class="card text-white bg-primary"></div>
+            </div>
+            <div class="col-3">
+                <div class="card text-white bg-primary"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

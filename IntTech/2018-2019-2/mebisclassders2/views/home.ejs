@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous">
+</head>
+
+<body>
+  <%- include('menu',{bolum:{adi:'deneme bolum',sayi:15}}); %>
+  <div class="container card mt-4">
+    <table class="table table-dark">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">UserName</th>
+          <th scope="col">PassWord</th>
+          <th scope="col">SurName</th>
+          <th scope="col">Departman</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% data.forEach(function(item){ %>
+        <tr>
+          <th scope="row">
+            <%=item.Id%>
+          </th>
+          <td>
+            <%=item.UserName%>
+          </td>
+          <td>
+            <%=item.Password%>
+          </td>
+          <td>
+            <%=item.SurName%>
+          </td>
+          <td> <a href="/departman/<%=item.Id%>">departman</a></td>
+        </tr>
+
+        <% }); %>
+
+      </tbody>
+    </table>
+  </div>
+
+</body>
+
+</html>
