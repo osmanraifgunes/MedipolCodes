@@ -1,0 +1,39 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <img id="ekran" />
+    <script>
+        // navigator.tcpPermission.requestPermission({ remoteAddress: "localhost", remotePort: 4545 }).then(
+        //     () => {
+        //         mySocket.readable.getReader().read().then(
+        //             ({ value, done }) => {
+        //                 if (!done) {
+        //                     // Response received, log it:
+        //                     document.getElementById('ekran').src = value;
+        //                     console.log("Data received from server:" + value);
+        //                 }
+
+        //                 // Close the TCP connection
+        //                 mySocket.close();
+        //             }
+        //         );
+        //     }
+        // );
+        var connection = new WebSocket('ws://127.0.0.1:3030');
+
+        connection.onopen = function () {
+            connection.send('Ping'); // Send the message 'Ping' to the server
+        };
+
+        connection.onmessage = function (event) {
+            document.getElementById('ekran').src = event.data;
+        };
+
+    </script>
+</body>
+
+</html>
