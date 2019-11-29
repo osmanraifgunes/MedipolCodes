@@ -1,0 +1,11 @@
+{
+    "name": "mongo-db-ve-express-ornek",
+    "description": "ders örnek",
+    "repository": {},
+    "license": "BSD-3-Clause",
+    "dependencies": {
+        "express": "*",
+        "request": "^2.88.0",
+        "ejs": "*"
+    }
+}
