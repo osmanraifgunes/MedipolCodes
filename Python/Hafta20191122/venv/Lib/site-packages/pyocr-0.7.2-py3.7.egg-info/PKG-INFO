@@ -1,0 +1,25 @@
+Metadata-Version: 1.2
+Name: pyocr
+Version: 0.7.2
+Summary: A Python wrapper for OCR engines (Tesseract, Cuneiform, etc)
+Home-page: https://gitlab.gnome.org/World/OpenPaperwork/pyocr
+Author: Jerome Flesch
+Author-email: jflesch@openpaper.work
+License: GPLv3+
+Description: UNKNOWN
+Keywords: tesseract cuneiform ocr
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Multimedia :: Graphics :: Capture :: Scanners
+Classifier: Topic :: Multimedia :: Graphics :: Graphics Conversion
+Classifier: Topic :: Scientific/Engineering :: Image Recognition
+Requires-Python: >=3.4

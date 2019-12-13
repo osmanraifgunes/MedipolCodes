@@ -4,8 +4,9 @@
     "repository": {},
     "license": "BSD-3-Clause",
     "dependencies": {
+        "ejs": "*",
         "express": "*",
-        "request": "^2.88.0",
-        "ejs": "*"
+        "mongodb": "^3.3.5",
+        "request": "^2.88.0"
     }
 }

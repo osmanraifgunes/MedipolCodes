@@ -1,0 +1,9 @@
+{
+    "name": "ornek-istek",
+    "dependencies": {
+        "ejs": "^2.7.4",
+        "express": "*",
+        "request": "*"
+    },
+    "description": "bu proje deneme amaçlıdır"
+}

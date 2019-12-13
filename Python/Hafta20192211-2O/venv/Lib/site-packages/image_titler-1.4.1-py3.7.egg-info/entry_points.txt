@@ -1,0 +1,3 @@
+[console_scripts]
+image_titler = image_titler.trc_image_titler:main
+
