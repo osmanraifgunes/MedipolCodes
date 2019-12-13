@@ -1,11 +1,13 @@
 import tkinter as tk
 
 class ulke(tk.Label):
-    def __init__(self):
-        super().__init__()
+    def __init__(self, dunya,renk):
+        super().__init__(master=dunya, text= "merhaba", background=renk)
+
         pass
 
-    renk= ""
     askerSayisi = 0
-    komsular = []
-    
+    sagKomsu = ""
+    solKomsu = ""
+    altKomsu = ""
+    ustKomsu = ""
