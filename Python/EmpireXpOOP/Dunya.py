@@ -27,12 +27,17 @@ class dunya(tk.Tk):
                 oyuncu = self.oyuncular[random.randint(0, len( self.oyuncular) - 1)]
                 eklenecekUlke.renkVer(oyuncu.renk)
                 self.ulkeler[i].append(eklenecekUlke)
-                if (i != 0):
-                    eklenecekUlke.komsular.append(self.ulkeler[i-1][j])
-                    self.ulkeler[i-1][j] = eklenecekUlke
-                if (j != 0):
-                    self.ulkeler[i][j-1] = eklenecekUlke
-                    eklenecekUlke.komsular.append(self.ulkeler[i][j - 1])
                 oyuncu.ulkeler.append(eklenecekUlke)
-        self.mainloop()
 
+    def komsulariBelirle(self):
+        for i in range(0, self.ulkeSayisi - 1 ):
+            for j in range(0, self.ulkeSayisi - 1 ):
+                geciciUlke = self.ulkeler[i][j] #komşusu belirlenecek ülke
+                if (i != 0):
+                    geciciUlke.komsular.append(self.ulkeler[i-1][j])
+                if (j != 0):
+                    geciciUlke.komsular.append(self.ulkeler[i][j - 1])
+                if (i != self.ulkeSayisi - 1):
+                    geciciUlke.komsular.append(self.ulkeler[i + 1][j])
+                if (j != self.ulkeSayisi - 1):
+                    geciciUlke.komsular.append(self.ulkeler[i][j + 1])
