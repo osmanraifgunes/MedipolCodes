@@ -1,7 +1,12 @@
-class oyuncu():
-    def __init__(self):
+import tkinter as tk
+
+class oyuncu(tk.Label):
+    def __init__(self, master):
+        super().__init__(master = master, background = "white")
         self.eklemeSayisi = 3
         self.ulkeler = []
+        self.renk = ""
+        self.sira = 0
 
         """if self.ulkeSayisi / 3 < 3:
             self.eklemeSayisi = 3
@@ -9,10 +14,11 @@ class oyuncu():
             self.eklemeSayisi = self.ulkeSayisi / 3"""
 
     ulkeSayisi = 0
-    renk = ""
     kartlar = []
     kitalar = []
-
+    def ekranaEkle(self):
+        self["text"] = self.renk
+        self["foreground"] = self.renk
     def ulkeSecildi(event):
         pass
 
