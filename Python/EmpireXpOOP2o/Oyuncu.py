@@ -13,15 +13,21 @@ class oyuncu():
     def tasima(self):
         pass
 
-    def bonusHesapla(self,ulke,count, gezilenYerler):
+    def bonusHesapla(self,ulke,index, gezilenYerler):
         gezilenYerler.append(ulke.name)
-        count += 1
+        index += 1
 
-        try:
-            gezilenYerler.index(ulke.sagKomsu.name)
-        except:
-            if ulke.sagKomsu != "" and ulke.renk == ulke.sagKomsu.renk and count < 4:
-                self.bonusHesapla(ulke.sagKomsu, count,gezilenYerler)
+        def komsuKontrol(komsu):
+            try:
+                gezilenYerler.index(komsu.name)
+            except:
+                if komsu != "" and ulke.renk == komsu.renk and index < 4:
+                    self.bonusHesapla(komsu, index, gezilenYerler)
 
-        if count >= 4:
+        komsuKontrol(ulke.solKomsu)
+        komsuKontrol(ulke.ustKomsu)
+        komsuKontrol(ulke.sagKomsu)
+        komsuKontrol(ulke.altKomsu)
+
+        if index >= 4:
            self.askerHakki += 3

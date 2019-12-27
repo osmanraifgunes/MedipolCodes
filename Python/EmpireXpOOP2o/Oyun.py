@@ -9,6 +9,8 @@ game.komsulariBelirle()
 for o in game.oyuncular:
     for u in o.ulkeleri:
         o.bonusHesapla(u, 0, [])
+
 for o in game.oyuncular:
     print(o.renk, " ", o.askerHakki)
+
 game.mainloop()
