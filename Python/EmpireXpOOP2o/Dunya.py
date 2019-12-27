@@ -14,6 +14,7 @@ class dunya(tk.Tk):
     oyuncuSayisi = 0
     x = 0
     y = 0
+    aktifOyuncu = None
 
 
     def ulkleriOlustur(self):
@@ -28,24 +29,28 @@ class dunya(tk.Tk):
                 o.ulkeleri.append(u)
                 self.ulkeler[i].append(u)
 
-
-
     def oyuncuEkle(self):
         for i in range(self.oyuncuSayisi):
-            oyuncu = Oyuncu.oyuncu()
+            oyuncu = Oyuncu.oyuncu(self)
             oyuncu.renk = Renkler.colors[i]
+            oyuncu["fg"] = oyuncu.renk
+            oyuncu["bg"] = "gray"
+            oyuncu["text"] = oyuncu.renk
+            oyuncu.grid(row=i, column=12)
+            oyuncu.sira = i+ 1
             self.oyuncular.append(oyuncu)
+            self.oyuncular[0].aktifHaleGetir()
 
     def komsulariBelirle(self):
-        for i in self.ulkeler:
-            for j in i:
-                if(j.x>0):
-                    j.ustKomsu = self.ulkeler[j.x-1][j.y]
-                if (j.x<self.ulkeSayisi-2):
-                    j.altKomsu = self.ulkeler[j.x+1][j.y]
-                if(j.y>0):
-                    j.solKomsu = self.ulkeler[j.x][j.y-1]
-                if (j.y < self.ulkeSayisi - 2):
-                    j.sagKomsu = self.ulkeler[j.x][j.y+1]
+        for satir in self.ulkeler:
+            for ulke in satir:
+                if(ulke.x>0):
+                    ulke.ustKomsu = self.ulkeler[ulke.x-1][ulke.y]
+                if (ulke.x<self.ulkeSayisi - 1):
+                    ulke.altKomsu = self.ulkeler[ulke.x+1][ulke.y]
+                if(ulke.y>0):
+                    ulke.solKomsu = self.ulkeler[ulke.x][ulke.y-1]
+                if (ulke.y < self.ulkeSayisi - 1):
+                    ulke.sagKomsu = self.ulkeler[ulke.x][ulke.y+1]
 
 
