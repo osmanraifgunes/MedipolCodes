@@ -17,14 +17,15 @@ class dunya(tk.Tk):
 
 
     def ulkleriOlustur(self):
-
         for i in range(0,self.ulkeSayisi):
             for j in range(0, self.ulkeSayisi):
                 o = self.oyuncular[random.randint(0, self.oyuncuSayisi-1)]
-                u = Ulke.ulke(self, o.renk)
+                u = Ulke.ulke(self, o.renk, "label" + str(i) + str(j))
+                u.renk = o.renk
                 u.grid(row=i, column=j, sticky=tk.NSEW)
                 u.x = i
                 u.y = j
+                o.ulkeleri.append(u)
                 self.ulkeler[i].append(u)
 
 
@@ -46,5 +47,5 @@ class dunya(tk.Tk):
                     j.solKomsu = self.ulkeler[j.x][j.y-1]
                 if (j.y < self.ulkeSayisi - 2):
                     j.sagKomsu = self.ulkeler[j.x][j.y+1]
-        x = ""
-        self.mainloop()
+
+

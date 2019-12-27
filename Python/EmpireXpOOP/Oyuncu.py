@@ -8,7 +8,6 @@ class oyuncu():
         else:
             self.eklemeSayisi = self.ulkeSayisi / 3"""
 
-
     ulkeSayisi = 0
     renk = ""
     kartlar = []

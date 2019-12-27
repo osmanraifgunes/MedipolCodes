@@ -30,8 +30,8 @@ class dunya(tk.Tk):
                 oyuncu.ulkeler.append(eklenecekUlke)
 
     def komsulariBelirle(self):
-        for i in range(0, self.ulkeSayisi - 1 ):
-            for j in range(0, self.ulkeSayisi - 1 ):
+        for i in range(0, self.ulkeSayisi  ):
+            for j in range(0, self.ulkeSayisi ):
                 geciciUlke = self.ulkeler[i][j] #komşusu belirlenecek ülke
                 if (i != 0):
                     geciciUlke.komsular.append(self.ulkeler[i-1][j])
@@ -41,3 +41,5 @@ class dunya(tk.Tk):
                     geciciUlke.komsular.append(self.ulkeler[i + 1][j])
                 if (j != self.ulkeSayisi - 1):
                     geciciUlke.komsular.append(self.ulkeler[i][j + 1])
+
+
