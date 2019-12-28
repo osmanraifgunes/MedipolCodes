@@ -6,13 +6,11 @@ var sunucu = net.createServer();
 sunucu.on('connection', function (socket) {
     setInterval(function () {
         screenshot().then(function (img) {
-
-         
             socket.write(img);
         }).catch((err) => {
             // ...
         })
-    }, 5000);
+    }, 1000);
 
 });
 
