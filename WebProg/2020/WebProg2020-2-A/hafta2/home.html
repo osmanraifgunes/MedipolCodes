@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input oninput="metinDegeriniAl()" id="metinKutusu" placeholder="metin giriniz" />
+    <p>
+        <div id="cevap">
+
+        </div>
+    </p>
+
+    <script>
+        function metinDegeriniAl() {
+            //alert(123)
+            var kutu = document.getElementById('metinKutusu');
+            alert(kutu.value)
+        }
+    </script>
+
+    <script>
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("cevap").innerText = xhttp.responseText;
+                veriParcalayici(xhttp.responseText)
+            }
+        };
+        xhttp.open("GET", "https://raw.githubusercontent.com/zynksoftware/samples/master/XML%20Samples/Invoice%20with%20NetValueDiscount%20Applied.xml", true);
+        xhttp.send();
+    </script>
+
+    <script>
+        function veriParcalayici(veri) {
+            parser = new DOMParser();
+            xmlDoc = parser.parseFromString(veri, "text/xml");
+            alert(xmlDoc.getElementsByTagName("Invoices")[0].childNodes[1].childNodes[27].childNodes[3].childNodes[3].innerHTML )
+        }
+
+    </script>
+</body>
+
+</html>

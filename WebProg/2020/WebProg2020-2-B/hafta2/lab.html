@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input oninput="metinGirme()" id="metinKutusu" placeholder="yazı girin" />
+    <p id="cevap"></p>
+    <script>
+        function metinGirme() {
+            var kutu = document.getElementById('metinKutusu');
+            alert(kutu.value)
+        }
+    </script>
+
+    <script>
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("cevap").innerText = xhttp.responseText;
+                parcala(xhttp.responseText)
+            }
+        };
+        xhttp.open("GET", "https://raw.githubusercontent.com/zynksoftware/samples/master/XML%20Samples/Supplier%20with%20Purchase%20Invoices%20and%20Payments.xml", true);
+        xhttp.send();
+
+    </script>
+
+    <script>
+        function parcala(xmlVerisi) {
+            var parser = new DOMParser();
+            var xmlDoc = parser.parseFromString(xmlVerisi, "text/xml");
+ 
+            alert(xmlDoc.getElementsByTagName('Transactions')[0].childNodes[5].childNodes[19].innerHTML)
+            // xmlDoc.getElementsByTagName("title")[0].childNodes[0].nodeValue;
+        }
+    </script>
+</body>
+
+</html>

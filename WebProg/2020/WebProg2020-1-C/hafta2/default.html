@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="metinKutusu" placeholder="metin giriniz" oninput="uyariverici(2)" />
+    <script>
+        function uyariverici(deger) {
+            var kutu = document.getElementById('metinKutusu');
+            alert(kutu.value)
+        }
+    //alert(1)
+    </script>
+    <script>
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                sonucAra(xhttp.responseText)
+            }
+        };
+        xhttp.open("GET", "https://raw.githubusercontent.com/zynksoftware/samples/master/XML%20Samples/Sales%20Order%20with%20Minimal%20Information.xml", true);
+        xhttp.send();
+
+    </script>
+
+    <script>
+        function sonucAra(veri) {
+            var parcaliyici = new DOMParser();
+            var sonucVerisi = parcaliyici.parseFromString(veri, "text/xml");
+            //alert(sonucVerisi.getElementsByTagName("Address2")[0].innerHTML)
+            alert(sonucVerisi.getElementsByTagName("SalesOrders")[0].childNodes[1].childNodes[7].childNodes[11].innerHTML)
+        }
+    </script>
+</body>
+
+</html>

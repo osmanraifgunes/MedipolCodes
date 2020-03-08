@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="metinKutusu" placeholder="yazı girin" oninput="verigirildi()" />
+    <p id="veriGosterici"></p>
+    <script>
+        function verigirildi() {
+            var yaziDegeri = document.getElementById('metinKutusu').value;
+            alert(yaziDegeri)
+        }
+    </script>
+    <script>
+        var cevapXml;
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                //alert(xhttp.response)
+                cevapXml = xhttp.response;
+                document.getElementById("veriGosterici").innerText = xhttp.response;
+                veriBolucu();
+            }
+        };
+        xhttp.open("GET", "https://raw.githubusercontent.com/zynksoftware/samples/master/XML%20Samples/ACT%20-%20Import%20Customer%20and%20Opportunity%20with%20Custom%20Fields.xml", true);
+        xhttp.send();
+    </script>
+    <script>
+        function veriBolucu() {
+            var parcalayici = new DOMParser();
+            xmlDoc = parcalayici.parseFromString(cevapXml, "text/xml");
+            alert(xmlDoc.getElementsByTagName("Customers")[0].childNodes[1].childNodes[7].childNodes[11].innerHTML);
+            
+        }
+
+
+      
+    </script>
+</body>
+
+</html>

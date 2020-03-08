@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="aramaKutusu" oninput="aramayap()" placeholder="versiyon girin" />
+    <p id="xmlGosterici">
+
+    </p>
+    <script>
+        function aramayap() {
+            var kutucuk = document.getElementById('aramaKutusu');
+            alert(kutucuk.value);
+        }
+    </script>
+
+    <script>
+        var dataTutucu;
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                dataTutucu = xhttp.responseText;
+                XmlArayici();
+            }
+        };
+        xhttp.open("GET", "https://raw.githubusercontent.com/eXist-db/public-repo/master/repo.xml", true);
+        xhttp.send();
+    </script>
+    <script>
+        function XmlArayici() {
+            parser = new DOMParser();
+            xmlDoc = parser.parseFromString(dataTutucu, "text/xml");
+            document.getElementById('xmlGosterici').innerHTML =
+            xmlDoc.getElementsByTagName("meta")[0].childNodes[23].childNodes[1].childNodes[1].childNodes[3].innerText;
+        }
+    </script>
+</body>
+
+</html>

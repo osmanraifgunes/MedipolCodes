@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.kapsayici{
+
+}
+.menu{
+ height: 65px;
+}
+.kapsayici hr{
+    border-top: 1px solid #efefef;
+    border-bottom: 0;
+    border-left:0;
+}
+.menu .logo{
+    width: 60px;
+    text-align: center;
+}
+
+.menu .logo img{
+
+    width: 28px;
+    margin-top: 18.5px;
+}
+.icerik{
+
+}
+
+.menu .arama{
+    margin-top: 10px;
+ background-color: #efefef;
+ padding: 5px;
+ width: 80%;
+ border-radius: 5px;
+}
+.menu .arama .aramaIsareti{
+
+}
+.menu .arama input{
+    width: 95%;
+}
+.kayanNesne{
+    float: left;
+}

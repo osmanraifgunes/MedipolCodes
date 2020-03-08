@@ -1,0 +1,63 @@
+*{
+ border: 0;
+ margin: 0;
+ padding: 0;
+}
+body{
+    background-color: #15161a;
+    font-family: arial;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.solaCek{
+    float: left;
+}
+.sagaCek{
+    float: right;
+}
+.temizleyici{
+    clear: both;
+}
+.anaKutu{
+
+}
+
+.ustMenu{
+ background-color: #2a2b30;
+}
+
+.icerik{
+
+}
+
+.ustMenu .ustSol{
+}
+.ustMenu .ustSol .solNesne{
+    color: #ffffff; 
+    padding: 17px 20px;
+}
+
+.ustMenu .ustSol .solNesne i{
+    margin-right: 5px;
+   }
+.ustMenu .ustSag{
+    color: #26df2e;
+}
+.ustMenu .ustSag .sagNesne{
+    padding: 17px 20px;
+}
+
+.ustMenu .ustSag .sagNesne .arama{
+    color: white; 
+    font-size:23px;
+    padding: 0px 20px;
+}
+
+.ustMenu .ustSag .sagNesne .sepetYazisi{
+    color: white;
+}
+.ustMenu .ustSag .sagNesne.sepetButonu{
+    background-color: #26df2e;
+    color: white;
+}
