@@ -4,11 +4,17 @@
  border: 0;   
 }
 body{
+    font-family: Arial, Helvetica, sans-serif;
     
     background-color: red;
 }
 .anaDiv{
     
+}
+.cerceve{
+    
+    margin-left: 2.5%;
+    width: 95%;
 }
 .ustMenu{
     background-color: red;
@@ -33,7 +39,76 @@ body{
     height: 72px;
     background-color: white;
 }
+.anaMenu .anaMenuNesne{
+    float: left;
+    margin: 24.5px 0;
+    padding-right: 19px;
+    padding-left: 20px;
+    font-size: 1.3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    border-right:1px solid rgb(29,29,29);
+}
+
+.anaMenu .Icon{
+    float: left;
+    margin-top: 12px;
+    width: 48px;
+    height: 48px;
+    font-size: 1.3rem;
+    border-right:1px solid rgb(29,29,29);
+    border:2px solid #b3b3b3;
+    border-radius: 40px;
+    text-align: center;
+    margin-left: 10px;
+
+}
+.anaMenu .Icon i, .anaMenu .Icon img{
+    margin-top: calc((48px - 21px) / 2) ;
+    
+}
+
+.anaMenu .Sube{
+    border:2px solid #e10514;
+    border-radius: 50px;
+    margin: 14.5px 10px;
+    padding: 10px 40px;
+}
+
+.animasyon .slider{
+    background-image: url('../image/atm.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 650px;
+    color: white;
+    }
+
+.animasyon .slider .cerceve{
+    padding-top: 20%;
+}
+.animasyon .slider .cerceve h2{
+   width: 50%;
+    font-size: 3rem;
+}
+
 .anaMenu img{
     padding-top: 13px ;
     width: 219px;
+}
+
+.altMenu .altMenuNesne{
+    width: 25%;
+    float: left;
+    height: 400px;
+}
+
+.altMenu .altMenuNesne:nth-child(even){
+    background-image: url('https://picsum.photos/300/400');
+    
+}
+.altMenu .altMenuNesne .gri{
+    background-color: rgba(190, 190, 190, .9);
+    height: 400px;
+}
+.altMenu .altMenuNesne:nth-child(odd){
+    background-color: white;
 }
