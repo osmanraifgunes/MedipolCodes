@@ -2,7 +2,25 @@
     margin: 0;
     padding: 0;
 }
-
+.haber-ortak{
+    min-width:100px ;
+    min-height:100px ;
+    float: left;
+    margin: 4px;
+    position: relative;
+    color: white;
+    font-family: arial;
+}
+.haber-ortak h2{
+    position: absolute;
+    bottom: 0px;
+    padding: 60px 20px;
+    background: linear-gradient(to bottom,transparent 0,#000 99%,#000 100%);
+    font-weight: 700;
+}
+.temizleyici{
+    clear: both;
+}
 .kapsayici{
 
 }
@@ -42,9 +60,29 @@
 }
 
 .haberler{
+    background-color: #eee;
+}
+.haber-buyuk{
+    background-image: url('https://picsum.photos/600/400');
+    height: 404px;
+    width: calc(50% - 8px);
+    font-size: 1.875em;
+
+}
+.haber-orta{
+    background-image: url('https://picsum.photos/500/400');
+    height: 404px;
+    width: calc(25% - 8px);
+    font-size: 1.25em;
 }
 
-.haberler .haber{
-    background-color: black;
-    color: white;
+.haber-kucuk{
+    background-image: url('https://picsum.photos/450/200');
+    font-size: 1em;
+    width:  calc(25% - 8px);
+    height: 202px;
+}
+
+.yayinakisi{
+
 }
