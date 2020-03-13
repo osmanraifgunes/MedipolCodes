@@ -106,13 +106,14 @@ position: relative;
     color: white;
 }
 .cokSatanlar .cokSatanKapsayici{
+    display: flex;
+    flex-wrap: wrap;
     margin-left: 10%;
 }
 .cokSatanlar .urun{
     height: 590px;
     background: radial-gradient(ellipse at center -20%,#4c4e58 0,#2a2b30 100%);
     width: 280px;
-    float: left;
     margin: 10px;
 }
 
