@@ -7,7 +7,6 @@
 
 }
 .menu{
- height: 65px;
 }
 .kapsayici hr{
     border-top: 1px solid #efefef;
@@ -25,22 +24,70 @@
     margin-top: 18.5px;
 }
 .icerik{
-
+    width: 100%;
+    text-align: -webkit-center;
+}
+.icerik .ortalayici{
+    width: 80%;
+}
+.icerik .icerikResim{
+    float: left;
+    margin: 10px;
+    position: relative;
+}
+.icerik .icerikResim img{
+    border-radius: 10px;
 }
 
+.icerik .icerikResim p{
+    display: none;
+    position: absolute;
+    top: 10px;
+}
+
+.icerik .icerikResim:hover p{
+    display: block;
+}
 .menu .arama{
-    margin-top: 10px;
- background-color: #efefef;
- padding: 5px;
- width: 80%;
- border-radius: 5px;
+    background-color: #efefef;
+    padding-left: 10px;
+    width: 52%;
+    border-radius: 5px;
+    margin-top: 12.5px;
+    height: 40px;
+}
+.menu .arama:active{
+    box-shadow: 0 0 0 4px rgba(0,132,255,.5);
 }
 .menu .arama .aramaIsareti{
-
+    
+    color: #5d5d5d;
+    margin-top: 10px;
 }
 .menu .arama input{
     width: 95%;
+    border: none;
+    background-color: #efefef;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;    
+}
+.menu .arama input:focus{
+    outline: none;
+}
+.menu .menuNesne{
+    margin: 22px;
+    font-size: 16px;
+    font-weight: 700;
+    font-family:Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+    color: #8e8e8e;
+}
+.menu .menuNesne.aktif{
+    color: black;
 }
 .kayanNesne{
     float: left;
+}
+.temizleyici{
+    clear: both;
 }
