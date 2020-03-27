@@ -97,10 +97,12 @@ body{
     padding-top: 13px ;
     width: 219px;
 }
-
+.altMenu{
+    display: flex;
+    flex-wrap: wrap;
+}
 .altMenu .altMenuNesne{
     width: 25%;
-    float: left;
     height: 400px;
 }
 

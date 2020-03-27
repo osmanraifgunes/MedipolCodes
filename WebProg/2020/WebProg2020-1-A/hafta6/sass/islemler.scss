@@ -1,0 +1,90 @@
+@import 'degiskenler.scss';
+
+body{
+    background-color: $anaRenk;
+    font-family: Arial, Helvetica, sans-serif;
+    h3{
+        font-size: 30px;
+        margin: 0;
+        margin-left: 1%;
+    }
+} 
+
+.kapsayici{
+
+    margin-left: $anaBosluk;
+    width: 80%; 
+    margin: 0 auto; /*ortaya hizalar*/
+    height: 250px;
+}
+
+.icerik 
+{
+    .portfolyo
+    {
+        display: flex;
+        flex-wrap: wrap;
+        .yapilanis{
+            margin: {
+                top:2%;
+                left: 1%;
+                right: 1%;
+                bottom: 2%;
+            };
+            padding: 1%;
+            width: 16%;
+            background-color: white;
+            box-shadow: 5px 10px 20px #c3c3c3;
+            //&& selector nasıl çalışır denenecek.
+            //Baran hatırlatacak.
+            &:hover{
+                background-color: whitesmoke;
+            }
+            img{
+                width: 100%;
+            }
+        }      
+    }
+
+    .yetkinlikler{
+        .yetkinlik{
+            background-color: white;
+            margin: {
+                bottom: 20px;
+            };
+            padding: 5px;
+            display: flex;
+            .yetkinlikAdi{
+                width: 50px;
+                // flex-grow: 1;     
+            }
+            .yetkinlikSeviyesi{
+                // flex-grow: 9;
+                background-color: red;
+            }
+            .seviye-1{
+                background-color: nth($yetkinlikDuzeyi,1);
+                width: 50px;
+            }
+            .seviye-2{
+                background-color: nth($yetkinlikDuzeyi,2);
+                width: 100px;
+            }
+            .seviye-3{
+                background-color: nth($yetkinlikDuzeyi,3);
+                width: 150px;
+            }
+            .seviye-4{
+                background-color: nth($yetkinlikDuzeyi,4);
+                width: 200px;
+            }
+            .seviye-5{
+                width: 250px;
+                background-color: nth($yetkinlikDuzeyi,5);
+            }
+        }
+    }
+}
+
+//$yetkinlikDuzeyi.set-nth($yetkinlikDuzeyi,2,blue);
+                 

@@ -1,0 +1,88 @@
+body {
+  background-color: #f7f7f7;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body h3 {
+  font-size: 30px;
+  margin: 0;
+  margin-left: 1%;
+}
+
+.kapsayici {
+  margin-left: 10%;
+  width: 80%;
+  margin: 0 auto;
+  /*ortaya hizalar*/
+  height: 250px;
+}
+
+.icerik .portfolyo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.icerik .portfolyo .yapilanis {
+  margin-top: 2%;
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-bottom: 2%;
+  padding: 1%;
+  width: 16%;
+  background-color: white;
+  -webkit-box-shadow: 5px 10px 20px #c3c3c3;
+  box-shadow: 5px 10px 20px #c3c3c3;
+}
+
+.icerik .portfolyo .yapilanis:hover {
+  background-color: whitesmoke;
+}
+
+.icerik .portfolyo .yapilanis img {
+  width: 100%;
+}
+
+.icerik .yetkinlikler .yetkinlik {
+  background-color: white;
+  margin-bottom: 20px;
+  padding: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.icerik .yetkinlikler .yetkinlik .yetkinlikAdi {
+  width: 50px;
+}
+
+.icerik .yetkinlikler .yetkinlik .yetkinlikSeviyesi {
+  background-color: red;
+}
+
+.icerik .yetkinlikler .yetkinlik .seviye-1 {
+  background-color: #f31111;
+  width: 50px;
+}
+
+.icerik .yetkinlikler .yetkinlik .seviye-2 {
+  background-color: #f39111;
+  width: 100px;
+}
+
+.icerik .yetkinlikler .yetkinlik .seviye-3 {
+  background-color: #f3ef11;
+  width: 150px;
+}
+
+.icerik .yetkinlikler .yetkinlik .seviye-4 {
+  background-color: #8af311;
+  width: 200px;
+}
+
+.icerik .yetkinlikler .yetkinlik .seviye-5 {
+  width: 250px;
+  background-color: #1eff00;
+}

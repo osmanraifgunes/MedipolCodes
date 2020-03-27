@@ -1,0 +1,49 @@
+ @import 'degisken.scss';
+
+body{
+    font-family: $yaziTipi;
+    background-color: rgb(241, 241, 241);
+}
+
+.kapsayici{
+    background-color: white;
+    width: 80%;
+    margin: 0 auto;
+    //margin-left: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    .hero {
+        //flex: 1 0 50%;
+        margin: 3%; 
+        flex-basis: $kutuBoyutu;
+        &:hover{
+            box-shadow: 5px 15px 15px 15px #dcdcdc;
+        }   
+        .heroBaslik{
+            
+        }
+        .heroOzellikler{
+            
+            .heroOzellik{
+                height: 20px;
+                color: red;
+            }
+            .level-1{
+                width: 25%;
+                background-color:  nth($level,1)
+            }
+            .level-2{
+                width: 50%;
+                background-color:  nth($level,2)
+            }
+            .level-3{
+                width: 75%;
+                background-color:  nth($level,3)
+            }
+            .level-4{
+                width: 100%;
+                background-color:  nth($level,4)
+            }
+        }
+    }
+}

@@ -1,0 +1,51 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f1f1f1;
+}
+
+.kapsayici {
+  background-color: white;
+  width: 80%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.kapsayici .hero {
+  margin: 3%;
+  -ms-flex-preferred-size: 44%;
+  flex-basis: 44%;
+}
+
+.kapsayici .hero:hover {
+  -webkit-box-shadow: 5px 15px 15px 15px #dcdcdc;
+  box-shadow: 5px 15px 15px 15px #dcdcdc;
+}
+
+.kapsayici .hero .heroOzellikler .heroOzellik {
+  height: 20px;
+  color: red;
+}
+
+.kapsayici .hero .heroOzellikler .level-1 {
+  width: 25%;
+  background-color: #dcdcdc;
+}
+
+.kapsayici .hero .heroOzellikler .level-2 {
+  width: 50%;
+  background-color: #cbd44e;
+}
+
+.kapsayici .hero .heroOzellikler .level-3 {
+  width: 75%;
+  background-color: #92e479;
+}
+
+.kapsayici .hero .heroOzellikler .level-4 {
+  width: 100%;
+  background-color: green;
+}
