@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/tasarim.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <!-- <script src="scripts/home.js"></script> -->
+
+</head>
+
+<body>
+    <!-- onload="alert(1)" -->
+    <div class="paylasim">
+        <div class="baslik">‎
+            İshak Çakır‎ to fiseyin emmi (umut sarıkaya)
+        </div>
+        <div class="icerik">
+            <img src="https://scontent.fsaw1-1.fna.fbcdn.net/v/t1.0-9/91637405_3163364350363513_2795815944948023296_n.jpg?_nc_cat=100&_nc_sid=ca434c&_nc_oc=AQk3mKjGB15JZwbzQVE0hLS1vOQ6PL2-y8k8C65XxyQ2UjvzDzimOqJO6vnTwAYRrBQ&_nc_ht=scontent.fsaw1-1.fna&oh=4af6fb876b191e38b5ff1ce58ba2c122&oe=5EAEE71F"
+                alt="">
+        </div>
+        <div class="like">
+            <div>
+                <!-- onclick="begenmeFonk()" -->
+                <i id="begenButonu" class="far fa-thumbs-up"></i> beğen
+                (
+                <span id="begenisayisi">
+                    10
+                </span>
+                )
+            </div>
+            <div>
+                <i class="far fa-comment-alt"></i> yorum
+            </div>
+        </div>
+    </div>
+    <script>
+        var begen = document.getElementById('begenButonu');
+
+        function begenmeFonk() {
+            var begeniSayisi = document.getElementById('begenisayisi').textContent;
+
+            if (begen.style.color == 'rgb(56, 88, 152)') {
+                begen.style.color = '#606770';
+                begen.className = 'far fa-thumbs-up'
+                begeniSayisi = parseInt(begeniSayisi) - 1
+            } else {
+                begeniSayisi = parseInt(begeniSayisi) + 1;
+                begen.style.color = '#385898';
+                begen.className = 'fa fa-thumbs-up';
+            }
+            document.getElementById('begenisayisi').textContent = begeniSayisi;
+        }
+        begen.onclick = begenmeFonk;
+
+        // setInterval(() => {
+        //     begenmeFonk();
+        // }, 1000);
+        // setInterval(() => {
+        //     begenmeFonk();
+        // }, 1000);
+        // setInterval(() => {
+        //     begenmeFonk();
+        // }, 1000);
+    </script>
+</body>
+
+</html>

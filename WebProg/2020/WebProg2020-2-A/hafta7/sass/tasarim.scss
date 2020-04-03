@@ -1,0 +1,37 @@
+$faceblue : #385898;
+$bosluk:15px;
+
+body {
+    background-color: #e9ebee;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.paylasim {
+    width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    border: 1px solid #dddfe2;
+
+    .baslik {
+        padding: $bosluk;
+        font-weight: bold;
+        color: $faceblue;
+    }
+
+    .icerik {
+        img {
+            width: 100%;
+        }
+    }
+
+    .like {
+        cursor: pointer;
+        column-count: 2;
+        font-size: 20px;
+        color: #606770;
+        div {
+            padding: $bosluk;
+            text-align: center;
+        }
+    }
+}
