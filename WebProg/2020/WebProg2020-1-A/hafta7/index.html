@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/still.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+</head>
+
+<body>
+    <div class="paylasim">
+        <div class="tepe">
+            osmanraifgunes
+        </div>
+        
+        <div class="resim">
+            <img src="https://pbs.twimg.com/profile_images/624010822453489664/kGIV11nC_400x400.jpg" alt="" srcset="">
+        </div>
+        <div class="bitis">
+            <span>
+                <i id="begenmebutonu" class="far fa-heart"></i>
+            </span>
+            <span>
+                <i class="far fa-comment"></i>
+            </span>
+            <br />
+            <div class="begenenler">
+                begeniler:
+            </div>
+        </div>
+    </div>
+    <script>
+        var tiklama = false
+        var begenme = document.getElementById('begenmebutonu');
+        
+        var tiklamaIslemi = function () {
+            //window.location.href = 'http://google.com'
+            tiklama = !tiklama
+            var begenenler = document.getElementsByClassName('begenenler')
+            if (tiklama == true) {
+                begenme.className = "fa fa-heart"
+                begenenler[0].innerHTML =begenenler[0].innerHTML + ' osmanraifgunes'
+                
+            } else {
+                begenme.className = "far fa-heart"
+                begenenler[0].innerHTML = 'begeniler: '
+            }
+            
+        }
+        begenme.onclick = tiklamaIslemi;
+        //alert(begenme.className);
+    </script>
+</body>
+
+</html>

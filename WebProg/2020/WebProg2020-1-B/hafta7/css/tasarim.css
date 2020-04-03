@@ -1,0 +1,37 @@
+body {
+  background-color: #c7c3c3;
+}
+
+.golge, .paylasim {
+  -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+.paylasim {
+  background-color: white;
+  width: 500px;
+  margin: 0 auto;
+}
+
+.paylasim .tepe {
+  -webkit-column-count: 2;
+  column-count: 2;
+  padding: 15px;
+}
+
+.paylasim .tepe i {
+  float: right;
+}
+
+.paylasim .icerik {
+  padding: 15px;
+}
+
+.paylasim .aksiyon {
+  padding: 15px;
+}
+
+.paylasim .aksiyon span {
+  cursor: pointer;
+  padding: 5px;
+}

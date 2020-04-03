@@ -1,0 +1,14 @@
+@mixin level-olusturucu {
+
+    //through veya to
+    @for $i from 1 through length($level) {
+        .level-#{$i} {
+            width: uzunluk-heaplayici($i);
+            background-color: nth($level, $i)
+        }
+    }
+}
+
+@function uzunluk-heaplayici($level) {
+    @return $level * 12%;
+}

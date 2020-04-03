@@ -1,0 +1,12 @@
+@mixin seviye-olustur {
+    @for $i from 1 through length($yetkinlikDuzeyi) {
+        .seviye-#{$i} {
+            background-color: nth($yetkinlikDuzeyi, $i);
+            width: uzunluk-hesaplayici($i)
+        }
+    }
+}
+
+@function uzunluk-hesaplayici($deger) {
+   @return  $deger * 50px;
+}
