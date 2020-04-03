@@ -1,0 +1,49 @@
+ @import 'degisken.scss';
+ @import 'mixins.scss';
+
+ .temel-class{
+    background-color: white;
+ }
+ body {
+     font-family: $yaziTipi;
+     background-color: rgb(180, 180, 180);
+ }
+
+ .kapsayici {
+     @extend .temel-class;
+     width: 80%;
+     margin: 0 auto;
+     //margin-left: 10%;
+     display: flex;
+     flex-wrap: wrap;
+
+     .hero {
+         //flex: 1 0 50%;
+         padding: 1%;
+         margin: 2%;
+         flex-basis: $kutuBoyutu;
+
+         &:hover {
+             box-shadow: 5px 15px 15px 15px #dcdcdc;
+         }
+
+         .heroBaslik {}
+
+         .heroOzellikler {
+            @extend .temel-class;
+             .heroOzellik {
+                 margin: 5px;
+                 height: 20px;
+                 padding: 3px;
+                 color: white;
+             }
+
+             @include seviye-olusturucu;
+
+             // .level-4{
+             //     width: 100%;
+             //     background-color:  nth($level,4)
+             // }
+         }
+     }
+ }
