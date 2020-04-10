@@ -1,0 +1,36 @@
+body {
+  background-color: #dcdcdc;
+}
+
+.slider {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.slider .slides {
+  overflow: auto;
+  overflow-x: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.slider .controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 800px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.slider .controls .control {
+  font-size: 100px;
+  cursor: pointer;
+}
+
+.slider .controls .control:hover {
+  color: gray;
+}
+/*# sourceMappingURL=still.css.map */
