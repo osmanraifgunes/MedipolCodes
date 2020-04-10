@@ -33,56 +33,88 @@
             <div class="slide">
                 <img src="https://picsum.photos/800/300?7" alt="">
             </div>
-        </div>
-        <div class="controls">
-            <div onclick="slideBasla(1)" class="control">
-                .
+            <div class="slide">
+                <img src="https://picsum.photos/800/300?1" alt="">
             </div>
-            <div onclick="slideBasla(2)" class="control">
-                .
+            <div class="slide">
+                <img src="https://picsum.photos/800/300?2" alt="">
             </div>
-            <div onclick="slideBasla(3)" class="control">
-                .
+            <div class="slide">
+                <img src="https://picsum.photos/800/300?3" alt="">
             </div>
-            <div onclick="slideBasla(4)" class="control">
-                .
+            <div class="slide">
+                <img src="https://picsum.photos/800/300?4" alt="">
             </div>
-            <div onclick="slideBasla(5)" class="control">
-                .
+            <div class="slide">
+                <img src="https://picsum.photos/800/300?5" alt="">
             </div>
-            <div onclick="slideBasla(6)" class="control">
-                .
+            <div class="slide">
+                <img src="https://picsum.photos/800/300?6" alt="">
+            </div>
+            <div class="slide">
+                <img src="https://picsum.photos/800/300?7" alt="">
+            </div>
+            <div class="slide">
+                <img src="https://picsum.photos/800/300?1" alt="">
+            </div>
+            <div class="slide">
+                <img src="https://picsum.photos/800/300?2" alt="">
+            </div>
+            <div class="slide">
+                <img src="https://picsum.photos/800/300?3" alt="">
+            </div>
+            <div class="slide">
+                <img src="https://picsum.photos/800/300?4" alt="">
+            </div>
+            <div class="slide">
+                <img src="https://picsum.photos/800/300?5" alt="">
+            </div>
+            <div class="slide">
+                <img src="https://picsum.photos/800/300?6" alt="">
+            </div>
+            <div class="slide">
+                <img src="https://picsum.photos/800/300?7" alt="">
             </div>
         </div>
     </div>
     <script>
-        // function scrolledildi(sliderDivi) {
-        //     console.log();
-        // 
 
-        var sliderDivi = document.getElementsByClassName('slides')[0];
+        var slidelar = document.getElementsByClassName('slide');
+        var slider = document.getElementsByClassName('slider')[0];
+
+        //create element ile
+        //var kontroller = document.createElement('div');
+        //kontroller.className = 'controls';
+        // for (let index = 0; index < slides.length; index++) {
+        //     var kontrol = document.createElement('div');
+        //     kontrol.className = "control";
+        //     kontrol.textContent = ".";
+        //     kontrol.setAttribute("onclick", "slideBasla(" + index + ")")
+        //     kontroller.appendChild(kontrol);
+        // }
+        //slider.appendChild(kontroller)
+
+        //innerhtml ile
+
+        var slides = document.getElementsByClassName('slides')[0];
+
+        var icerik = '<div class="controls">'
+        for (let index = 0; index < slidelar.length; index++) {
+            icerik += '<div class="control" onclick="slideBasla(' + index + ')"> . </div>'
+        }
+        icerik += '</div>'
+        slider.innerHTML += icerik;
+
+        debugger
         function slideBasla(slideSayisi) {
-            var mevcutKonum = sliderDivi.scrollLeft;
+            var mevcutKonum = slides.scrollLeft;
             slideSayisi = slideSayisi - 1;
-            var slides = document.getElementsByClassName('slide');
-            // setInterval(() => {
-            //     alert(1);
-            // }, 3000);
-
-            // for (let index = 1; index <= 100; index++) {
-            //     setTimeout(() => {
-            //         sliderDivi.scrollLeft = slideSayisi * 8 * index;
-            //     }, index * 10);
-
-            // }
-            debugger;
             var fark = ((slideSayisi * 800) - mevcutKonum) / 800;
-            
+
             for (let index = 1; index <= 100; index++) {
                 setTimeout(() => {
-                    sliderDivi.scrollLeft +=  8 * fark;
+                    slides.scrollLeft += 8 * fark;
                 }, index * 10);
-
             }
 
         }
