@@ -77,6 +77,9 @@
             </div>
         </div>
     </div>
+    
+    <a href="index-manuel.html">otomatiğe git</a>
+    
     <script>
 
         var slidelar = document.getElementsByClassName('slide');
@@ -96,7 +99,6 @@
 
         //innerhtml ile
 
-        var slides = document.getElementsByClassName('slides')[0];
 
         var icerik = '<div class="controls">'
         for (let index = 0; index < slidelar.length; index++) {
@@ -104,8 +106,8 @@
         }
         icerik += '</div>'
         slider.innerHTML += icerik;
+        var slides = document.getElementsByClassName('slides')[0];
 
-        debugger
         function slideBasla(slideSayisi) {
             var mevcutKonum = slides.scrollLeft;
             slideSayisi = slideSayisi - 1;

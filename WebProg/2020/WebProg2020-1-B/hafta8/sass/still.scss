@@ -1,0 +1,35 @@
+body{
+    background-color:#dcdcdc;
+}    
+
+.sekmeler{
+  
+    .basliklar{
+        display: flex;
+        .baslik{
+            padding: 20px;
+            margin:10px;
+            background-color: #dcdcdc;
+            cursor: pointer;
+            margin-bottom: 0;
+        }
+        .baslik:hover{
+            background-color: white;
+        }
+    }
+ 
+    .sekme{
+     
+        .icerik{
+            display: none;
+            width: 800px;
+            height: 500px;
+            background-color: white;
+            padding: 20px;
+            margin:10px;
+            margin-top: 0;
+        }
+    }
+}
+
+//#feb500
