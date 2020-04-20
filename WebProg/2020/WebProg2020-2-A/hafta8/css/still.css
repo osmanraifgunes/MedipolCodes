@@ -1,0 +1,24 @@
+body {
+  background-color: white;
+}
+
+.kapanabilirKutu .kutu {
+  border: 2px solid #9f9fcf;
+  margin: 2px 2%;
+}
+
+.kapanabilirKutu .kutu .baslik {
+  padding: 20px;
+  cursor: pointer;
+  border-bottom: 2px solid #9f9fcf;
+}
+
+.kapanabilirKutu .kutu .baslik:hover {
+  background-color: #9f9fcf;
+}
+
+.kapanabilirKutu .kutu .icerik {
+  height: 0;
+  overflow: hidden;
+}
+/*# sourceMappingURL=still.css.map */

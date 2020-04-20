@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="card mb-3 mt-5 p-2">
+            <div class="input-group">
+                <input type="text" id="aramaKutusu" class="form-control" placeholder=""
+                    aria-label="Example text with button addon" aria-describedby="button-addon1">
+                <div class="input-group-prepend">
+                    <button class="btn btn-outline-secondary" type="button" onclick="aramaYap()"
+                        id="button-addon1">Button</button>
+                </div>
+            </div>
+        </div>
+        <div class="sonucDivi">
+
+
+        </div>
+    </div>
+    <script>
+        var gelenAlbumler = [];
+        function aramaYap() {
+            var kelime = document.getElementById('aramaKutusu').value;
+            var adres = "http://ws.audioscrobbler.com/2.0/?method=album.search&album=" + kelime + "&api_key=03b4e790b00d8ab0bc3e42d6dde67a8f&format=json"
+            //http://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=03b4e790b00d8ab0bc3e42d6dde67a8f&artist=Cher&album=Believe&format=json
+            let xhr = new XMLHttpRequest();
+            xhr.open('GET', adres);
+            xhr.responseType = 'json';
+            xhr.send();
+            xhr.onload = function () {
+                gelenAlbumler = xhr.response.results.albummatches.album;
+                goster();
+            };
+        }
+        function goster() {
+            var listeKapsayici = document.getElementsByClassName('sonucDivi')[0];
+            var sonucHtml = "";
+            gelenAlbumler.forEach((element, index) => {
+                if (index % 4 == 0) {
+                    sonucHtml += '<div class="card-deck">'
+                }
+                sonucHtml += '<div class="card mb-3">'
+                sonucHtml += ' <img src="' + element.image[2]['#text'] + '" class="card - img - top" >'
+                sonucHtml += '<div class="card-body"> <a onclick="detayagit(\''+element.mbid+'\')">' + element.name + '</a> </div>';
+                sonucHtml += '<div class="card-footer">' + element.artist + '</div>';
+                sonucHtml += '</div>'
+                if (index % 4 == 3) {
+                    sonucHtml += '</div>'
+                }
+            });
+            listeKapsayici.innerHTML = sonucHtml;
+        }
+        function detayagit(mbid) {
+            localStorage.setItem('tiklananAlbum',mbid)
+            window.location = "/detay.html"
+            // alert(mbid)
+        }
+
+    </script>
+</body>
+
+</html>

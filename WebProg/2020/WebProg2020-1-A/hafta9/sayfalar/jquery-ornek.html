@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/css/jq-ui.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+</head>
+
+<body>
+    <div class="renklenen">
+        renklendirici
+    </div>
+
+
+    <ul id="menu" style="width: 500px;">
+        <li class="ui-state-disabled">
+            <div>Toys (n/a)</div>
+        </li>
+        <li>
+            <div>Books</div>
+        </li>
+        <li>
+            <div>Clothing</div>
+        </li>
+        <li>
+            <div>Electronics</div>
+            <ul>
+                <li class="ui-state-disabled">
+                    <div>Home Entertainment</div>
+                </li>
+                <li>
+                    <div>Car Hifi</div>
+                </li>
+                <li>
+                    <div>Utilities</div>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <div>Movies</div>
+        </li>
+        <li>
+            <div>Music</div>
+            <ul>
+                <li>
+                    <div>Rock</div>
+                    <ul>
+                        <li>
+                            <div>Alternative</div>
+                        </li>
+                        <li>
+                            <div>Classic</div>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div>Jazz</div>
+                    <ul>
+                        <li>
+                            <div>Freejazz</div>
+                        </li>
+                        <li>
+                            <div>Big Band</div>
+                        </li>
+                        <li>
+                            <div>Modern</div>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div>Pop</div>
+                </li>
+            </ul>
+        </li>
+        <li class="ui-state-disabled">
+            <div>Specials (n/a)</div>
+        </li>
+    </ul>
+
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <div>
+        <div id="seciciDugme">
+            .
+        </div>
+        <div class="slider">
+            <div>
+                <img src="https://picsum.photos/800/600?as3=1" alt="" srcset="">
+            </div>
+            <div>
+                <img src="https://picsum.photos/800/600?as4=1" alt="" srcset="">
+            </div>
+            <div>
+                <img src="https://picsum.photos/800/600?as2=1" alt="" srcset="">
+            </div>
+            <div>
+                <img src="https://picsum.photos/800/600?as1=1" alt="" srcset="">
+            </div>
+            <div>
+                <img src="https://picsum.photos/800/600?as0=1" alt="" srcset="">
+            </div>
+
+        </div>
+    </div>
+    <!-- <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script> -->
+    <script src="/scripts/jquery.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="http://gsgd.co.uk/sandbox/jquery/easing/jquery.easing.1.3.js"></script>
+    <script>
+        // $('.renklenen').on('click',function (params) {
+        //     alert(1);
+        // })
+        $('#menu').menu();
+        $('.renklenen').click(function (event) {
+            $(event.target).append('<span>merhaba</span>')
+        })
+
+        $(document).ready(function () {
+            $('.slider').bxSlider({
+                auto: true,
+                speed: 500,
+                mode: 'fade',
+                minSlides: 3,
+                pagerSelector: "#seciciDugme"
+            });
+        });
+    </script>
+</body>
+
+</html>

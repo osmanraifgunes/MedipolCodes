@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/still.css">
+</head>
+
+<body>
+    <div class="kapanabilirKutu">
+        <div class="kutu" onclick="baslikTiklandi(1)">
+            <div class="baslik">kutu 1</div>
+            <div class="icerik">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
+                moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
+                shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
+                proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim
+                aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+            </div>
+        </div>
+        <div class="kutu">
+            <div class="baslik" onclick="baslikTiklandi(2)">kutu 2</div>
+            <div class="icerik">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
+                moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
+                shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
+                proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim
+                aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+            </div>
+        </div>
+        <div class="kutu">
+            <div class="baslik" onclick="baslikTiklandi(3)">kutu 3</div>
+            <div class="icerik">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
+                moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
+                shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
+                proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim
+                aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+            </div>
+        </div>
+        <div class="kutu">
+            <div class="baslik" onclick="baslikTiklandi(4)">kutu 4</div>
+            <div class="icerik">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
+                moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
+                shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
+                proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim
+                aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+            </div>
+        </div>
+        <div class="kutu">
+            <div class="baslik" onclick="baslikTiklandi(5)">kutu 5</div>
+            <div class="icerik">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
+                moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
+                shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
+                proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim
+                aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+            </div>
+        </div>
+    </div>
+    <script>
+        // var myFnc = function (){
+        //     alert('5 saniye geçti')
+        // }
+        // setTimeout(myFnc, 5000);
+        // aynısı
+        // setTimeout(() => {
+        //     alert('5 saniye geçti')
+        // }, timeout);
+
+
+        // setInterval(() => {
+        //     alert('2 saniye geçti')
+        // }, 2000);
+
+
+        function baslikTiklandi(baslikSirasi) {
+            baslikSirasi = baslikSirasi - 1;
+            var iceriks = document.getElementsByClassName('icerik');
+            // if (iceriks[baslikSirasi].style.height == 'auto') {
+            //     iceriks[baslikSirasi].style.height = '0'
+            // }
+            // else {
+            //     iceriks[baslikSirasi].style.height = 'auto'
+            // }
+            if (iceriks[baslikSirasi].style.height == '100px') {
+                for (let index = 0; index <= 100; index++) {
+                    setTimeout(() => {
+                        iceriks[baslikSirasi].style.height = (100-index) + 'px';
+                    }, index * 3);
+                }
+            }
+            else {
+                for (let index = 0; index <= 100; index++) {
+                    setTimeout(() => {
+                        iceriks[baslikSirasi].style.height = index + 'px';
+                    }, index * 3);
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>
