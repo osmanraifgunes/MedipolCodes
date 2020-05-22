@@ -21,7 +21,8 @@
         </div>
         <div class="pure-u-3-5 ">
             <div class="anaicerik cerceveli">
-                merhaba. lohin olmak için üst menü de girişe tıklayınız
+
+
             </div>
 
         </div>
