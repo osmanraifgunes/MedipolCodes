@@ -7,6 +7,19 @@
 
 <body>
     <?php
+    function printer()
+    {
+        echo "Ben yazıcıyım!" . PHP_EOL;
+        while (true) {
+            $string = yield;
+            echo  'a <br/>' . $string . PHP_EOL;
+        }
+    }
+
+    $printer = printer();
+    $printer->send('Merhaba Dünya!');
+    $printer->send('Elveda Dünya!');
+
     if (count($_POST) > 0) {
         $servername = "sql2.freemysqlhosting.net";
         $username = "sql2338732";
@@ -43,7 +56,7 @@
                 </div>
             </div>
         </form>
-        <a  href="/index.php"> listeye git</a>
+        <a href="/index.php"> listeye git</a>
 
     </div>
 </body>
