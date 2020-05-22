@@ -21,22 +21,9 @@
         </div>
         <div class="pure-u-3-5 ">
             <div class="anaicerik cerceveli">
-                <form class="pure-form pure-form-stacked">
-                    <fieldset>
-                        <legend>Giriş</legend>
-                        <label for="stacked-email">Email</label>
-                        <input class="pure-input-1" type="email" placeholder="Email" />
-                        <span class="pure-form-message">This is a required field.</span>
-                        <label for="stacked-password">Password</label>
-                        <input class="pure-input-1" id="stacked-password" placeholder="Password" />
-                        <label for="stacked-state">State</label>
-                        <label for="stacked-remember" class="pure-checkbox">
-                            <input type="checkbox" id="stacked-remember" /> Remember me</label>
-                        <button type="submit" class="pure-button pure-button-primary">Sign in</button>
-                    </fieldset>
-                </form>
-            </div>
 
+
+            </div>
         </div>
         <div class="pure-u-1-5 ">
             <div class="cerceveli">
