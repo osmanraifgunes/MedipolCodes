@@ -11,9 +11,8 @@ function execDb($query)
     global $namedb;
     global $userdb;
     global $passdb;
-    $conn = new PDO("mysql:host=" .   $hostdb . "; dbname=" .  $namedb . ","  . $userdb . "," . $passdb);
-    if ($conn->exec($query) !== false) {
-        return $conn;
-    }
+    $conn = new PDO("mysql:host=" .   $hostdb . "; dbname=" .  $namedb, $userdb, $passdb);
+    $sonuc = $conn->query($query)->fetch(PDO::FETCH_COLUMN );
+    print_r($sonuc);
+    return $sonuc;
 }
-?>

@@ -11,6 +11,10 @@
 
 <body>
     <?php
+    include './islemler.php';
+    echo  print_r(execDb("select * from kullanici WHERE email = " . $_POST["kullaniciadi"]  . " AND sifre = "  . $_POST["sifre"]))
+    ?>
+    <?php
     include './parcali/header.php';
     ?>
     <div class="pure-g">
@@ -21,14 +25,14 @@
         </div>
         <div class="pure-u-3-5 ">
             <div class="anaicerik cerceveli">
-                <form class="pure-form pure-form-stacked">
+                <form class="pure-form pure-form-stacked" method="POST">
                     <fieldset>
                         <legend>Giriş</legend>
-                        <label for="stacked-email">Email</label>
-                        <input class="pure-input-1" type="email" placeholder="Email" />
+                        <label>Email</label>
+                        <input class="pure-input-1" type="email" name="kullaniciadi" placeholder="Email" />
                         <span class="pure-form-message">This is a required field.</span>
-                        <label for="stacked-password">Password</label>
-                        <input class="pure-input-1" id="stacked-password" placeholder="Password" />
+                        <label>Password</label>
+                        <input class="pure-input-1" name="sifre" placeholder="Password" />
                         <label for="stacked-state">State</label>
                         <label for="stacked-remember" class="pure-checkbox">
                             <input type="checkbox" id="stacked-remember" /> Remember me</label>
