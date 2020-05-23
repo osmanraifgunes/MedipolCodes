@@ -11,6 +11,13 @@
 
 <body>
     <?php
+    session_start();
+    if (isset($_SESSION["medipoltwitterkullanici"])) {
+        header('Location: /akis.php');
+    }
+    ?>
+
+    <?php
     include './islemler.php';
     $sonuc = null;
     if (isset($_POST["kullaniciadi"])) {
@@ -18,13 +25,12 @@
     }
 
     if ($sonuc != null && count($sonuc) > 0) {
+        $_SESSION["medipoltwitterkullanici"] = $sonuc;
         header('Location: /akis.php');
     }
 
     ?>
-    <?php
-    include './parcali/header.php';
-    ?>
+
     <div class="pure-g">
         <div class="pure-u-1-5 ">
             <div class="cerceveli">
@@ -46,7 +52,7 @@
                             <input type="checkbox" id="stacked-remember" /> Remember me</label>
                         <button type="submit" class="pure-button pure-button-primary">Sign in</button>
                         <?php
-                       
+
                         if ($sonuc !== null && count($sonuc) == 0) {
                             echo '<div class="uyari">şifre veya kullanici adı yanlış</div>';
                         }

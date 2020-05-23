@@ -17,4 +17,4 @@ function execDb($query)
     $sonuc = $hazirlik->fetchAll();
     return $sonuc;
 }
-
+?>
