@@ -12,7 +12,7 @@
 <body>
     <?php
     include './islemler.php';
-    echo  print_r(execDb("select * from kullanici WHERE email = " . $_POST["kullaniciadi"]  . " AND sifre = "  . $_POST["sifre"]))
+    echo var_dump(execDb("SELECT * FROM kullanici WHERE email = '" . $_POST["kullaniciadi"]  . "' AND sifre = '"  . $_POST["sifre"]."'"))
     ?>
     <?php
     include './parcali/header.php';

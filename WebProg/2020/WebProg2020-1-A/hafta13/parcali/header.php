@@ -18,7 +18,7 @@
         </li>
 
         <li class="pure-menu-item">
-            <a href="#" class="pure-menu-link">Gririş</a>
+            <a href="/login.php" class="pure-menu-link">Gririş</a>
         </li>
     </ul>
 

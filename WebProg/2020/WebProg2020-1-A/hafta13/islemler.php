@@ -12,7 +12,9 @@ function execDb($query)
     global $userdb;
     global $passdb;
     $conn = new PDO("mysql:host=" .   $hostdb . "; dbname=" .  $namedb, $userdb, $passdb);
-    $sonuc = $conn->query($query)->fetch(PDO::FETCH_COLUMN );
-    print_r($sonuc);
+    $sth = $conn->prepare($query);
+    $sth->execute();
+    $sonuc = $sth->fetchAll();
     return $sonuc;
+    
 }
