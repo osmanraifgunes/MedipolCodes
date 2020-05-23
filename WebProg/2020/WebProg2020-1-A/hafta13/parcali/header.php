@@ -4,7 +4,7 @@
             <a href="/index.php" class="pure-menu-link">Medipol</a>
         </li>
         <li class="pure-menu-item">
-            <a href="#" class="pure-menu-link">Akış</a>
+            <a href="/akis.php" class="pure-menu-link">Akış</a>
         </li>
         <li class="pure-menu-item">
             <a href="#" class="pure-menu-link">Paylaşım</a>
@@ -14,7 +14,7 @@
         </li>
 
         <li class="pure-menu-item">
-            <a href="#" class="pure-menu-link">Kayıt</a>
+            <a href="/register.php" class="pure-menu-link">Kayıt</a>
         </li>
 
         <li class="pure-menu-item">

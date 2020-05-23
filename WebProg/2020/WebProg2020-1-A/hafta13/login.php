@@ -12,7 +12,15 @@
 <body>
     <?php
     include './islemler.php';
-    echo var_dump(execDb("SELECT * FROM kullanici WHERE email = '" . $_POST["kullaniciadi"]  . "' AND sifre = '"  . $_POST["sifre"]."'"))
+    $sonuc = null;
+    if (isset($_POST["kullaniciadi"])) {
+        $sonuc =  execDb("SELECT * FROM kullanici WHERE email = '" . $_POST["kullaniciadi"]  . "' AND sifre = '"  . $_POST["sifre"] . "'");
+    }
+
+    if ($sonuc != null && count($sonuc) > 0) {
+        header('Location: /akis.php');
+    }
+
     ?>
     <?php
     include './parcali/header.php';
@@ -37,6 +45,12 @@
                         <label for="stacked-remember" class="pure-checkbox">
                             <input type="checkbox" id="stacked-remember" /> Remember me</label>
                         <button type="submit" class="pure-button pure-button-primary">Sign in</button>
+                        <?php
+                       
+                        if ($sonuc !== null && count($sonuc) == 0) {
+                            echo '<div class="uyari">şifre veya kullanici adı yanlış</div>';
+                        }
+                        ?>
                     </fieldset>
                 </form>
             </div>

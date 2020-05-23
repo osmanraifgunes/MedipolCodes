@@ -8,7 +8,21 @@
     border-top: 1px solid #dcdcdc;
     position: fixed;
     bottom: 0px;
-    text-align:center;
+    text-align:center;  
     padding: 10px;
     width: 100%;
+}
+
+.uyari{
+    background-color: rgb(146, 36, 36);
+    color: white;
+    padding: 10px;
+    margin-top: 10px;;
+}
+
+ul li{
+    border: 1px solid #dcdcdc;
+    padding: 15px;
+    margin: 15px;
+    list-style: none;
 }
