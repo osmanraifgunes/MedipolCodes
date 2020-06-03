@@ -1,0 +1,76 @@
+body {
+  background-color: white;
+}
+
+.kapsayici {
+  width: 80%;
+  height: 500px;
+  margin: 0 auto;
+}
+
+.kapsayici .filmler {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.kapsayici .filmler .film {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 1%;
+  margin-right: 3%;
+  margin-bottom: 0;
+  margin-left: 0;
+  -webkit-box-shadow: 7px 5px 15px #dcdcdc;
+  box-shadow: 7px 5px 15px #dcdcdc;
+  width: 47%;
+}
+
+.kapsayici .filmler .film:hover {
+  -webkit-box-shadow: 7px 5px 15px #9b9b9b;
+  box-shadow: 7px 5px 15px #9b9b9b;
+}
+
+.kapsayici .filmler .film .filmDegerlendirme {
+  width: 100%;
+}
+
+.kapsayici .filmler .film .filmDegerlendirme .kriter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5px;
+  width: 100%;
+}
+
+.kapsayici .filmler .film .filmDegerlendirme .kriter .kriterAdi {
+  width: 15%;
+}
+
+.kapsayici .filmler .film .filmDegerlendirme .kriter .kriterLevel {
+  margin-left: 20px;
+  height: 15px;
+}
+
+.kapsayici .filmler .film .filmDegerlendirme .kriter .level-1 {
+  width: 10%;
+  background-color: #b5caa1;
+}
+
+.kapsayici .filmler .film .filmDegerlendirme .kriter .level-2 {
+  width: 30%;
+  background-color: #99da86;
+}
+
+.kapsayici .filmler .film .filmDegerlendirme .kriter .level-3 {
+  width: 55%;
+  background-color: #62c543;
+}
+
+.kapsayici .filmler .film .filmDegerlendirme .kriter .level-4 {
+  width: 75%;
+  background-color: #269603;
+}

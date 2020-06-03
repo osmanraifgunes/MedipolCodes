@@ -1,0 +1,62 @@
+body{
+    background-color: white;
+}
+
+.kapsayici{
+    width: 80%;
+    height: 500px;
+    margin: 0 auto;
+    //margin-left: 10%;
+    .filmler{
+        display: flex;  
+        flex-wrap: wrap;
+
+        .film{
+            display: flex;
+            margin:{
+                top:1%;
+                right: 3%;
+                bottom: 0;
+                left: 0;
+            }
+            box-shadow: $golgeBoyutu #dcdcdc;
+
+            width: 47%;
+            &:hover{
+                box-shadow: $golgeBoyutu #9b9b9b;
+            }    
+            .filmDegerlendirme{
+                width: 100%;
+                .kriter{
+                    display: flex;
+                    padding: 5px;
+                    width: 100%;
+                    .kriterAdi{
+                        width: 15%;
+                    }
+                    .kriterLevel{
+                        margin-left: 20px;
+                        height: 15px;
+                       
+                    }
+                    .level-1{
+                        width: 10%;
+                        background-color:  nth($kriterPuan, 1)
+                    }
+                    .level-2{
+                        width: 30%;
+                        background-color: nth($kriterPuan, 2)
+                    }
+                    .level-3{
+                        width: 55%;
+                        background-color: nth($kriterPuan, 3)
+                    }
+                    .level-4{
+                        width: 75%;
+                        background-color: nth($kriterPuan, 4)
+                    }
+                }
+            }
+        }
+    }
+}
