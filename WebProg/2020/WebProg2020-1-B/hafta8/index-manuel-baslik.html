@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/still.css">
+</head>
+
+<body>
+    <div class="sekmeler">
+        <div class="basliklar">
+            <!-- <div class="baslik" onclick="sekmeyiAc(1)">
+                hesap aç
+            </div>
+            <div class="baslik" onclick="sekmeyiAc(2)">
+                kampanya
+            </div>
+            <div class="baslik" onclick="sekmeyiAc(3)">
+                bize ulaş
+            </div>
+            <div class="baslik" onclick="sekmeyiAc(4)">
+                sarı rehber
+            </div>
+            <div class="baslik" onclick="sekmeyiAc(5)">
+                kredi çek
+            </div> -->
+        </div>
+        <div class="sekme">
+            <div class="icerik" style="display: block;">
+                sırlar ağır sorumluluklardır, herkes taşıyamaz. çünkü
+                bilinmemesi gereken bir şeyi bilmek ve bunu kendine saklayabilmek her baba yiğidin harcı değildir. bu
+                yüzden birine bir sır verirken tutabilir mi diye düşünmekten ziyade taşıyabilir mi diye düşünmek gerekir
+                önce. zira kimileri sırrınızı ölene kadar saklar, kimileri ise nail oldukları anda yanmaya başlar ve bu
+                ağır yük onları mezara sokar.
+
+                bir sırrın gücü ömründedir. ne kadar uzun süre saklı kalırlarsa o kadar güçlenir. hatta öyle sırlar
+                vardır ki, insan ömrünü de aşar, birileri onu ortaya çıkarana kadar yüzyıllarca yaşar. zira her sır önce
+                sahibini yakar.
+
+                sen sahip olduğun en büyük sırrı kaç yıldır taşıyorsun?
+
+                yeni bir sırra ortak olmak için alef, şimdi blutv’de.
+                yeni diziyi beraber yorumlamak için alef (dizi), şimdi ekşi'de.
+            </div>
+        </div>
+        <div class="sekme">
+            <div class="icerik">
+                bu oluşum hakkında uzun uzadıya bir sürü şey yazabilirim ama okunabilirlik adına kısa ve öz tutacağım.
+
+                ankara'daki evimde 50'den fazla insan ağırladım. birçoğuna evin tek anahtarını verdim. veriyorum
+                anahtarı. akşam işten çıkmadan önce arıyorum, evde buluşuyoruz. çok şükür bir yedek yaptırdım da şimdi
+                onu veriyorum. daha da fazlası, birkaç kez ben evde değilken ağırladım. üstelik ben evde değilken
+                misafirlerim değişti ve yüzünü hiç görmediğim misafirlerim oldu. anahtarı kapının önüne bırakıp
+                gidiyorum. girip kalıyorlar. çıkınca da yerine bırakıyorlar. evde naçizane tv'si, laptopu, telefonu vs.
+                duruyor tabi. her misafirime de aynı şeyi söylüyorum. "ev senin, istediğin gibi kullan".
+            </div>
+        </div>
+        <div class="sekme">
+            <div class="icerik">
+                yahu boşa kafa yoruyorsunuz. ssg kendi beğendiği entryleri oyladığı zaman yazarın başucu eseri oluyor
+                işte bu. sonra ssg gelip okumak isteyince kendine kolaylık yaratmış oluyor. yok uzunmuş, kısaymış bilmem
+                ne... ssg uzun seviyor demek ki.
+            </div>
+        </div>
+        <div class="sekme">
+            <div class="icerik">
+                "deniz kenarına bırakılmış bir tekne düşünelim. eğer bilinçli bir müdahale yapılmazsa zaman içinde bu
+                tekne yıpranacaktır. mesela yüz sene sonra tekneye bakmaya gelseniz tekneden belki de eser dahi
+                bulamayacaksınız. yani kimse teknenin bir gemiye dönüşme hikayesini beklemez."
+
+                bu sözleriyle beni dine döndüren video. insanlar maymundan geliyorsa şimdiki tekneler neden gemi olmuyor
+                sorusunu kendime sorunca gerçekleri anlamaya, aydınlanmaya başladım.
+            </div>
+        </div>
+        <div class="sekme">
+            <div class="icerik">
+                amsiki isimli bir nickle buraya can yücel olmaya gelmiş bir yazar arkadaşımızın beyanı
+
+                debe editi: şimdi öncelikle hepinize teşekkürler bu entry yi oyladığınız için ancak sözlüğümüzün kanayan
+                yarasına parmak basmak istiyorum bunu sayın amsiki kardeşim ile de konuştuk trollerin değeri bilinmiyor
+                beyler onlar olmazsa bizde olmayız ayar içerikli entrylerin tadı kalmaz şimdi ben bunu niye yazdım
+                bu troll ibneleri kamçılansın daha çok çalışssın diye onlara başlık altında ayarlar bize şukular
+                verilsin diye çalışın ulan köpekler!
+            </div>
+        </div>
+    </div>
+    <script>
+
+
+        function sekmeyiAc(sekmeSirasi) {
+            var icerikler = document.getElementsByClassName('icerik');
+            var basliklar = document.getElementsByClassName('baslik');
+            sekmeSirasi = sekmeSirasi - 1;
+
+
+            for (let index = 0; index < icerikler.length; index++) {
+                icerikler[index].style.display = 'none'
+                basliklar[index].style.backgroundColor = '#dcdcdc'
+            }
+
+            basliklar[sekmeSirasi].style.backgroundColor = 'white';
+            icerikler[sekmeSirasi].style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>

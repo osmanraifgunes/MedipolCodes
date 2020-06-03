@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container p-2">
+        <div class="card mb-3">
+            <div class="input-group m-3 p-2">
+                <input type="text" class="form-control" id="kitapAdiFiltre" placeholder="kitap adı"
+                    aria-label="Recipient's username">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" onclick="kitapAra()" type="button"
+                        id="button-addon2">Button</button>
+                </div>
+            </div>
+        </div>
+        <div id="kitapListesi">
+
+        </div>
+
+
+    </div>
+</body>
+
+<script>
+    var kitaplar = [];
+    function kitapAra() {
+        var filtre = document.getElementById('kitapAdiFiltre').value;
+        var xhr = new XMLHttpRequest();
+        xhr.responseType = 'json';
+        xhr.open("GET", 'http://openlibrary.org/search.json?q=' + filtre, true);
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                kitaplar = xhr.response.docs;
+                sonucGoster();
+            }
+        };
+        xhr.send();
+    }
+    function sonucGoster() {
+        var htmlIcerik = "";
+        kitaplar.forEach((element, index) => {
+            if (index % 4 == 0) {
+                htmlIcerik += '<div class="card-deck m-2">';
+            }
+            htmlIcerik += '<div class="card">';
+            htmlIcerik += element.title;
+            if (element.isbn) {
+                htmlIcerik += '<img class="card-img-top"  src="http://covers.openlibrary.org/b/isbn/' + element.isbn[0] + '-S.jpg"/>';
+            }
+            htmlIcerik += '</div>';
+            if (index % 4 == 3) {
+                htmlIcerik += '</div>';
+            }
+        });
+        document.getElementById('kitapListesi').innerHTML = htmlIcerik;
+    }
+    //http://openlibrary.org/search.json?q=harry+potter
+</script>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+</head>
+
+<body>
+    <div id="yildiz">
+    </div>
+    <span id="puan"></span>
+
+    <script>
+        var yildizSayisi = 10;
+        var yildiz = document.getElementById('yildiz');
+        var puanSpan = document.getElementById('puan');
+        puanSpan.textContent = 0;
+        function ciz(boyaliSayisi) {
+            var icerik = "";
+            for (let i = 0; i < yildizSayisi; i++) {
+                if (boyaliSayisi < i) {
+                    icerik += '<i onclick="oyver(' + i + ')" onmouseenter ="koyulastir(' + i + ')"  class="far fa-star"></i>'
+                }
+                else {
+                    icerik += '<i onclick="oyver(' + i + ')" onmouseenter ="koyulastir(' + i + ')"  class="fa fa-star"></i>'
+                }
+            }
+            yildiz.innerHTML = icerik;
+        }
+
+        ciz(3);
+
+        function koyulastir(index) {
+            for (let i = 0; i < yildizSayisi; i++) {
+                if (i <= index) {
+                    yildiz.childNodes[i].className = "fa fa-star"
+                }
+                else {
+                    yildiz.childNodes[i].className = "far fa-star"
+                }
+            }
+
+
+            //element
+        }
+
+        function oyver(puan) {
+            puan++;
+            puanSpan.textContent = puan + '/' + yildizSayisi;
+        }
+    </script>
+</body>
+
+</html>

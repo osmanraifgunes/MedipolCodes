@@ -1,0 +1,30 @@
+body{
+    background-color: #dcdcdc;
+} 
+
+.slider{
+    width: 800px;
+    margin: 0 auto;
+    .slides{
+        overflow: auto;
+        overflow-x: hidden;
+        display: flex;
+        .slide{
+
+        }
+    }
+    
+    .controls{
+        display: flex;
+        width: 800px;
+        justify-content: center;
+        .control{
+            font-size: 100px;    
+            cursor: pointer;
+            &:hover{
+                color: gray;
+            }
+        }
+       
+    }
+}

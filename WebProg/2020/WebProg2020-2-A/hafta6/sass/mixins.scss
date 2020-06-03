@@ -1,0 +1,15 @@
+@mixin seviye-olusturucu {
+    //through veya to
+    @for $i from 1 through length($level) {
+        .level-#{$i} {
+            width: uzunluk-hesaplyci($i);
+            background-color: nth($level, $i)
+        }
+    }
+
+}
+
+//fonksiyon örnek
+@function uzunluk-hesaplyci($leveladi){
+    @return $leveladi * 12%;
+}

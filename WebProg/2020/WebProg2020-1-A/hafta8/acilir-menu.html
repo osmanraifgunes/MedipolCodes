@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .anamenu {
+            display: flex;
+        }
+
+        .menu .baslik,
+        .menu .altmenuler .altmenu {
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid gray;
+            cursor: pointer;
+        }
+        .menu .baslik:hover,
+        .menu .altmenuler .altmenu:hover{
+            background-color: azure;
+        }
+        .menu .altmenuler {
+            display: none;
+           
+        }
+
+        .menu .altmenu {
+            position: absolute;
+            width: 800px;
+            background-color: red;
+            height: 500px;
+        }
+
+        .menu .baslik:hover ~ .altmenuler {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="anamenu">
+        <div class="menu">
+            <div class="baslik">
+                <span>başlık2</span>
+            </div>
+            <div class="altmenuler">
+                <div class="altmenu">2</div>
+                <div class="altmenu">2</div>
+                <div class="altmenu">2</div>
+                <div class="altmenu">2</div>
+                <div class="altmenu">2</div>
+                <div class="altmenu">2</div>
+                <div class="altmenu">2</div>
+
+            </div>
+        </div>
+        <div class="menu">
+
+            <div class="baslik">
+                <span>başlık2</span>
+            </div>
+            <div class="altmenuler">
+                <div class="altmenu">2</div>
+                <div class="altmenu">2</div>
+                <div class="altmenu">2</div>
+                <div class="altmenu">2</div>
+                <div class="altmenu">2</div>
+                <div class="altmenu">2</div>
+                <div class="altmenu">2</div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

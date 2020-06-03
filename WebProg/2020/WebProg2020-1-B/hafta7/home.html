@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="css/tasarim.css">
+    <!-- <script src="script.js"></script> -->
+    <!-- <script>
+         setTimeout(() => {
+            var begenButonu = document.getElementById('begen');
+            alert(begenButonu.textContent)
+        }, 3000);
+    </script> -->
+</head>
+
+<body>
+    <!-- onload="alert(1)" -->
+    <div class="paylasim">
+        <div class="tepe">
+            <div class="paylasici">
+                <b>Tuğçe Alphan</b> bunu beğendi
+            </div>
+
+            <i class="fa fa-ellipsis-h"></i>
+        </div>
+        <div class="icerik">
+
+            Mahsum AkbaşDurum çevrimiçi
+            Mahsum Akbaş
+            • 1.
+            Principal Software QA/Test Consultant
+            3s • 3 saat önce
+            Bugün, saat 20:00'de, Test/QA etkinliğimize bekleriz.
+            #meetup #online #qa #test #meet
+            13
+            3 Yorum
+        </div>
+        <div class="aksiyon">
+            <span>
+                <i id="begen" onclick="begenmeIslemi()" class="far fa-thumbs-up"></i> beğen
+            </span>
+            <span>
+                <i class="far fa-comment-alt"></i> yorum yap
+            </span>
+            <span>
+                <i class="far fa-share-square"></i> paylaş
+            </span>
+        </div>
+    </div>
+    <script>
+        //yöntem 1
+        // var begenButonu = document.getElementById('begen');
+        // var begenmeIslemi = function () {
+        //     if (begenButonu.style.color == 'blue') {
+        //         begenButonu.className = 'far fa-thumbs-up';
+        //         begenButonu.style.color = 'black';
+        //     } else {
+        //         begenButonu.style.color = 'blue';
+        //         begenButonu.className = 'fa fa-thumbs-up';
+        //     }
+        // };
+        // begenButonu.onclick = begenmeIslemi;
+
+
+        //yontem 2
+        var begenButonu = document.getElementById('begen');
+
+        function begenmeIslemi() {
+            if (begenButonu.style.color == 'blue') {
+                begenButonu.className = 'far fa-thumbs-up';
+                begenButonu.style.color = 'black';
+            } else {
+                begenButonu.style.color = 'blue';
+                begenButonu.className = 'fa fa-thumbs-up';
+            }
+        };
+    </script>
+</body>
+
+</html>

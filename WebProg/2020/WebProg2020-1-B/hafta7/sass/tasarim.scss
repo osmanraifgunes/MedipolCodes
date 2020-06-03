@@ -1,0 +1,38 @@
+$bosulk : 15px;
+body {
+    background-color: #c7c3c3;
+}
+
+@function sinir-olusturucu {
+    @return 1px solid #e6e9ec;
+}
+
+.golge {
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, .15), 0 2px 3px rgba(0, 0, 0, .2);
+}
+
+.paylasim {
+    @extend .golge;
+    background-color: white;
+    width: 500px;
+    margin: 0 auto;
+
+    .tepe {
+        column-count: 2;
+        padding: $bosulk;
+        i{
+            float: right;
+        }
+    }
+    .icerik{
+        padding: $bosulk;
+    }
+    .aksiyon{
+        padding: $bosulk;
+        span{
+            cursor: pointer;
+            padding: 5px;
+        }
+    }
+
+}

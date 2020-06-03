@@ -62,9 +62,6 @@ body{
     margin-left: 10px;
 
 }
-.anaMenu .Icon:hover{
-    border:2px solid red;
-}
 .anaMenu .Icon i, .anaMenu .Icon img{
     margin-top: calc((48px - 21px) / 2) ;
     

@@ -1,6 +1,10 @@
+.font-belirleyici, body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: red;
+}
+
 body {
   background-color: #f7f7f7;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 body h3 {
@@ -63,7 +67,7 @@ body h3 {
 }
 
 .icerik .yetkinlikler .yetkinlik .seviye-1 {
-  background-color: #f31111;
+  background-color: #f31113;
   width: 50px;
 }
 
@@ -83,6 +87,11 @@ body h3 {
 }
 
 .icerik .yetkinlikler .yetkinlik .seviye-5 {
-  width: 250px;
   background-color: #1eff00;
+  width: 250px;
+}
+
+.icerik .yetkinlikler .yetkinlik .seviye-6 {
+  background-color: #14af00;
+  width: 300px;
 }

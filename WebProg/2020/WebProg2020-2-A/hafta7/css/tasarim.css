@@ -1,0 +1,34 @@
+body {
+  background-color: #e9ebee;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.paylasim {
+  width: 600px;
+  margin: 0 auto;
+  background-color: white;
+  border: 1px solid #dddfe2;
+}
+
+.paylasim .baslik {
+  padding: 15px;
+  font-weight: bold;
+  color: #385898;
+}
+
+.paylasim .icerik img {
+  width: 100%;
+}
+
+.paylasim .like {
+  cursor: pointer;
+  -webkit-column-count: 2;
+  column-count: 2;
+  font-size: 20px;
+  color: #606770;
+}
+
+.paylasim .like div {
+  padding: 15px;
+  text-align: center;
+}

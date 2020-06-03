@@ -1,0 +1,19 @@
+body {
+  font-family: Arial, Helvetica, sans-serif; }
+
+.paylasim {
+  width: 500px;
+  margin: 0 auto;
+  border: 1px solid #dcdcdc; }
+  .paylasim .tepe {
+    padding: 10px; }
+  .paylasim .resim img {
+    width: 100%; }
+  .paylasim .bitis {
+    padding: 10px; }
+    .paylasim .bitis span {
+      padding-bottom: 10px;
+      display: inline-block;
+      cursor: pointer; }
+      .paylasim .bitis span i {
+        font-size: 25px; }

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/still.css">
+</head>
+
+<body>
+    <div class="slider">
+        <div class="slides">
+            <!-- onscroll="scrolledildi(this)" -->
+            <div class="slide">
+                <img src="https://picsum.photos/800/300?1" alt="">
+            </div>
+            <div class="slide">
+                <img src="https://picsum.photos/800/300?2" alt="">
+            </div>
+            <div class="slide">
+                <img src="https://picsum.photos/800/300?3" alt="">
+            </div>
+            <div class="slide">
+                <img src="https://picsum.photos/800/300?4" alt="">
+            </div>
+            <div class="slide">
+                <img src="https://picsum.photos/800/300?5" alt="">
+            </div>
+            <div class="slide">
+                <img src="https://picsum.photos/800/300?6" alt="">
+            </div>
+            <div class="slide">
+                <img src="https://picsum.photos/800/300?7" alt="">
+            </div>
+            <div class="slide">
+                <img src="https://picsum.photos/800/300?1" alt="">
+            </div>
+            <div class="slide">
+                <img src="https://picsum.photos/800/300?2" alt="">
+            </div>
+            <div class="slide">
+                <img src="https://picsum.photos/800/300?3" alt="">
+            </div>
+            <div class="slide">
+                <img src="https://picsum.photos/800/300?4" alt="">
+            </div>
+            <div class="slide">
+                <img src="https://picsum.photos/800/300?5" alt="">
+            </div>
+            <div class="slide">
+                <img src="https://picsum.photos/800/300?6" alt="">
+            </div>
+            <div class="slide">
+                <img src="https://picsum.photos/800/300?7" alt="">
+            </div>
+            <div class="slide">
+                <img src="https://picsum.photos/800/300?1" alt="">
+            </div>
+            <div class="slide">
+                <img src="https://picsum.photos/800/300?2" alt="">
+            </div>
+            <div class="slide">
+                <img src="https://picsum.photos/800/300?3" alt="">
+            </div>
+            <div class="slide">
+                <img src="https://picsum.photos/800/300?4" alt="">
+            </div>
+            <div class="slide">
+                <img src="https://picsum.photos/800/300?5" alt="">
+            </div>
+            <div class="slide">
+                <img src="https://picsum.photos/800/300?6" alt="">
+            </div>
+            <div class="slide">
+                <img src="https://picsum.photos/800/300?7" alt="">
+            </div>
+        </div>
+    </div>
+    
+    <a href="index-manuel.html">otomatiğe git</a>
+    
+    <script>
+
+        var slidelar = document.getElementsByClassName('slide');
+        var slider = document.getElementsByClassName('slider')[0];
+
+        //create element ile
+        //var kontroller = document.createElement('div');
+        //kontroller.className = 'controls';
+        // for (let index = 0; index < slides.length; index++) {
+        //     var kontrol = document.createElement('div');
+        //     kontrol.className = "control";
+        //     kontrol.textContent = ".";
+        //     kontrol.setAttribute("onclick", "slideBasla(" + index + ")")
+        //     kontroller.appendChild(kontrol);
+        // }
+        //slider.appendChild(kontroller)
+
+        //innerhtml ile
+
+
+        var icerik = '<div class="controls">'
+        for (let index = 0; index < slidelar.length; index++) {
+            icerik += '<div class="control" onclick="slideBasla(' + index + ')"> . </div>'
+        }
+        icerik += '</div>'
+        slider.innerHTML += icerik;
+        var slides = document.getElementsByClassName('slides')[0];
+
+        function slideBasla(slideSayisi) {
+            var mevcutKonum = slides.scrollLeft;
+            slideSayisi = slideSayisi - 1;
+            var fark = ((slideSayisi * 800) - mevcutKonum) / 800;
+
+            for (let index = 1; index <= 100; index++) {
+                setTimeout(() => {
+                    slides.scrollLeft += 8 * fark;
+                }, index * 10);
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>

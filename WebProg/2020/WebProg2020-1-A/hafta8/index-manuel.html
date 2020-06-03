@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/still.css">
+</head>
+
+<body>
+    <div class="slider">
+        <div class="slides">
+            <!-- onscroll="scrolledildi(this)" -->
+            <div class="slide">
+                <img src="https://picsum.photos/800/300?1" alt="">
+            </div>
+            <div class="slide">
+                <img src="https://picsum.photos/800/300?2" alt="">
+            </div>
+            <div class="slide">
+                <img src="https://picsum.photos/800/300?3" alt="">
+            </div>
+            <div class="slide">
+                <img src="https://picsum.photos/800/300?4" alt="">
+            </div>
+            <div class="slide">
+                <img src="https://picsum.photos/800/300?5" alt="">
+            </div>
+            <div class="slide">
+                <img src="https://picsum.photos/800/300?6" alt="">
+            </div>
+            <div class="slide">
+                <img src="https://picsum.photos/800/300?7" alt="">
+            </div>
+        </div>
+        <div class="controls">
+            <div onclick="slideBasla(1)" class="control">
+                .
+            </div>
+            <div onclick="slideBasla(2)" class="control">
+                .
+            </div>
+            <div onclick="slideBasla(3)" class="control">
+                .
+            </div>
+            <div onclick="slideBasla(4)" class="control">
+                .
+            </div>
+            <div onclick="slideBasla(5)" class="control">
+                .
+            </div>
+            <div onclick="slideBasla(6)" class="control">
+                .
+            </div>
+        </div>
+    </div>
+
+    <a href="index.html">manuele git</a>
+    
+    <script>
+        // function scrolledildi(sliderDivi) {
+        //     console.log();
+        // 
+
+        var sliderDivi = document.getElementsByClassName('slides')[0];
+        function slideBasla(slideSayisi) {
+            var mevcutKonum = sliderDivi.scrollLeft;
+            slideSayisi = slideSayisi - 1;
+            var slides = document.getElementsByClassName('slide');
+            // setInterval(() => {
+            //     alert(1);
+            // }, 3000);
+
+            // for (let index = 1; index <= 100; index++) {
+            //     setTimeout(() => {
+            //         sliderDivi.scrollLeft = slideSayisi * 8 * index;
+            //     }, index * 10);
+
+            // }
+            debugger;
+            var fark = ((slideSayisi * 800) - mevcutKonum) / 800;
+            
+            for (let index = 1; index <= 100; index++) {
+                setTimeout(() => {
+                    sliderDivi.scrollLeft +=  8 * fark;
+                }, index * 10);
+
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>
