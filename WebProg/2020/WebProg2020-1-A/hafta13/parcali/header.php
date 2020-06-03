@@ -1,9 +1,4 @@
-<?php
-Session_start();
-if (!isset( $_SESSION["medipoltwitterkullanici"])) {
-    header('Location: /login.php');
-}
-?>
+
 
 <div class="pure-menu pure-menu-horizontal anamenu">
     <ul class="pure-menu-list">
@@ -13,6 +8,11 @@ if (!isset( $_SESSION["medipoltwitterkullanici"])) {
         <li class="pure-menu-item">
             <a href="/akis.php" class="pure-menu-link">Akış</a>
         </li>
+
+        <li class="pure-menu-item">
+            <a href="/profil.php" class="pure-menu-link">Profil</a>
+        </li>
+
         <li class="pure-menu-item">
             <a href="#" class="pure-menu-link">Paylaşım</a>
         </li>
