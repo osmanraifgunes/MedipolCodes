@@ -9,7 +9,8 @@
     include './islemler.php';
     $sonuc = null;
     if (isset($_POST["kullaniciadi"])) {
-        $sonuc =  execDb("SELECT * FROM kullanici WHERE email = '" . $_POST["kullaniciadi"]  . "' AND sifre = '"  . $_POST["sifre"] . "'");
+
+        $sonuc =  execDb("SELECT * FROM kullanici WHERE email = '" . $_POST["kullaniciadi"]  . "' AND sifre = '"  . $_POST["sifre"] . "' AND aktifmi = true");
     }
 
     if ($sonuc != null && count($sonuc) > 0) {
@@ -55,6 +56,7 @@
                         <label for="stacked-remember" class="pure-checkbox">
                             <input type="checkbox" id="stacked-remember" /> Remember me</label>
                         <button type="submit" class="pure-button pure-button-primary">Sign in</button>
+                        <a href="/register.php">kayit ol</a>
                         <?php
 
                         if ($sonuc !== null && count($sonuc) == 0) {

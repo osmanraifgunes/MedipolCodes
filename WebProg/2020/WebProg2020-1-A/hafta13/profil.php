@@ -15,17 +15,27 @@ include './yetki.php';
 <body>
     <?php
     include './parcali/header.php';
+    include './islemler.php';
     ?>
 
     <?php
     if ($_FILES) {
-        $target_dir =  $_SERVER['DOCUMENT_ROOT'] . '\\up2\\';
-        $target_file = $target_dir . basename($_FILES["fotograf"]["name"]);
-        //echo is_writable( $target_dir );
-        
-        echo var_dump($target_file);
+        //upload alanı - diske kaydeder
+        $target_dir =  $_SERVER['DOCUMENT_ROOT'] . '\\uploads\\';
+        $dosyaAdi =   rand ( 1000000,10000000 ) .".". pathinfo($_FILES["fotograf"]["name"])['extension'];
+        $target_file = $target_dir . $dosyaAdi;
+        //echo is_writable( $target_file);
+        //echo var_dump($target_file);
         move_uploaded_file($_FILES["fotograf"]["tmp_name"], $target_file);
-        //echo $_FILES ["fotograf"]["error"];
+
+
+        //db güncellere
+        
+        $sonuc = null;
+        $kullaniciId = $_SESSION["medipoltwitterkullanici"][0]["id"];
+
+        $sonuc =  execDb("UPDATE kullanici set pp = '$dosyaAdi' WHERE id = $kullaniciId");
+        echo var_dump($sonuc);
     }
     ?>
 
@@ -40,6 +50,13 @@ include './yetki.php';
 
                 <form class="pure-form pure-form-aligned" method="POST" action="/profil.php" enctype="multipart/form-data">
                     <fieldset>
+                        <div class="pure-control-group">
+                            <?php
+                            $resim = $_SESSION["medipoltwitterkullanici"][0]["pp"];
+                            echo  "<img src=\"/uploads/$resim\" />"
+                            ?>
+
+                        </div>
                         <div class="pure-control-group">
                             <label for="aligned-password">Ad soyad</label>
                             <input type="text" id="aligned-password" placeholder="Ad soad" />
